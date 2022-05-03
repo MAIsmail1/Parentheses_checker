@@ -22,7 +22,6 @@ public class ParenthesesChecker {
         // loop through letters
         // - if letter is a bracket, add to the array
         for (String letter : letters) {
-            if (letter.equals("(")) {
                 if (letter.equals("(")) {
                     foundBrackets.add(letter);
                 } else if (letter.equals(")")) {
@@ -31,17 +30,18 @@ public class ParenthesesChecker {
                     }
                 }
             }
+
+            return foundBrackets.isEmpty();
         }
-        return foundBrackets.isEmpty();
-
-
-            //need to check if opening bracket comes first
-            // next bracket needs to be closing
-            // ... or nest pair
-            // no trailing opening bracket
-
-
-
     }
 
-}
+        //need to check if opening bracket comes first
+        // next bracket needs to be closing
+        // ... or nest pair
+        // no trailing opening bracket
+
+
+
+
+
+
